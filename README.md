@@ -13,7 +13,7 @@ Với mỗi chế độ chơi, trước khi vào game sẽ có thông tin về c
 ![Keys](README_images/Keys.png)
 Khi mới vào game, các xe tăng sẽ được xếp ở vị trí ngẫu nhiên. Bản đồ (mà phần chính là các đoạn tường ngang dọc) cũng sẽ được sinh ra ngẫu nhiên. Các người chơi cứ điều khiển xe tăng bắn nhau, cho đến khi nào chỉ còn lại đúng một xe sống sót, hoặc là không còn xe nào còn sống nữa, thì sau khoảng vài giây sẽ chuyển sang một trận tiếp theo, với bản đồ mới và đầy đủ các xe tăng. Ngoài ra, ở góc trên trái cũng có một nút home để quay trở về menu.
 ![Gameplay](README_images/Gameplay.png)
-Phần gameplay sẽ được nói chi tiết hơn trong video sau đây [Link video (Google Drive](). Video gồm có hai phần là giải thích cấu trúc code và minh họa cách chơi.
+Phần gameplay sẽ được nói chi tiết hơn trong video sau đây [Link video (Google Drive)](https://drive.google.com/file/d/1r41O6HLrBrQoo9OqnheXYLqS6Z91W2wD/view?usp=drive_link). Video gồm có hai phần là giải thích cấu trúc code và minh họa cách chơi.
 ### Trích dẫn nguồn
 Toàn bộ phần code là em tự viết. Thậm chí, em chủ đích dùng IDE cổ xưa DevC++ để code, nên còn không có AI completeion. Framework em dùng để code game là SFML https://www.sfml-dev.org/. SFML cũng ở cùng tầm (hay đúng thuật ngữ là cùng level of abstraction) với SDL, nhưng được cái SFML có tutorial rất chi tiết, beginner-friendly, nên em chọn SFML để tiện thể học về kiến trúc game cơ bản và các yếu tố thường gặp khi code game. \
 Gần như toàn bộ phần hình ảnh là em tự vẽ. Chỉ có mỗi cái ảnh xe tăng ở background là em lấy từ ảnh của game AZ gốc [Link ảnh](https://www.1001games.com/action/az-tanks). \
