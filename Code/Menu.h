@@ -1,9 +1,9 @@
 void handlingMouseClick() {
 	if (MenuPage == 0) {
 		if (EventCatcher.mouseButton.x >= 10 &&
-			EventCatcher.mouseButton.x < 10+30 &&
+			EventCatcher.mouseButton.x < 10+50 &&
 			EventCatcher.mouseButton.y >= 10 &&
-			EventCatcher.mouseButton.y < 10+30) MenuPage = 1;
+			EventCatcher.mouseButton.y < 10+50) MenuPage = 1;
 	}
 	else if (MenuPage == 1) {
 		if (EventCatcher.mouseButton.x >= 100 &&

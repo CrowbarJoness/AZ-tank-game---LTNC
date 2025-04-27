@@ -1,5 +1,4 @@
 void designTankBlueprint();
-void print(float HorizontalCoordinate, float UpperBound, float LowerBound);
 int initializeGloballyConstantEnvironment() {
 	WindowWidth = 1300;
 	WindowHeight = 650;
@@ -21,7 +20,6 @@ int initializeGloballyConstantEnvironment() {
 	
 	designTankBlueprint();
 	
-	//Definitely, please download image and sound links and adjust them according to your device
 	TextFont.loadFromFile("arial.ttf");
 	Sth.setFont(TextFont);
 	
@@ -49,7 +47,7 @@ int initializeGloballyConstantEnvironment() {
 	return 0;
 }
 int Initializer = initializeGloballyConstantEnvironment();
-//This is an amazing trick to run code outside the main() (mostly for initialization)
+// This is an amazing trick to run code outside the main() function (mostly for initialization)
 
 void clearVectors();
 void getTanks();
@@ -61,7 +59,7 @@ void setupNewGame() {
 	HorizontalBorden = (WindowWidth - MapWidth * CellSize) / 2;
 	VerticalBorden = (WindowHeight - MapHeight * CellSize) / 2;
 	
-	SpeedCoefficient = 0.05 + 0.001*MapWidth*MapHeight; // Need to be tested many times
+	SpeedCoefficient = 0.06 + 0.0003*MapWidth*MapHeight; // Need to be tested many times
 	// Changing speed to match with MapSize due to delay in drawing big map
 	TankSpeed = SpeedCoefficient;
 	BulletSpeed = SpeedCoefficient * 1.2;

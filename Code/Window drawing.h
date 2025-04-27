@@ -59,19 +59,11 @@ void handlingBullets() {
 bool LastMoment = 0;
 int CountSecond;
 
-void endGame() {
+void checkEndGame() {
 	if (Tanks.size() <= 1 && (!LastMoment)) {
 		CountSecond = time(0);
 		LastMoment = 1;
 	}
-	/*
-	if (LastMoment) {
-		if (Clock1.getElapsedTime().asMilliseconds() > 5000) {
-			setupNewGame();
-			LastMoment = 0;
-		}
-	}
-	*/
 	if (LastMoment) {
 		if (time(0) - CountSecond > 4) {
 			LastMoment = 0;
@@ -87,8 +79,8 @@ void endGame() {
 
 void drawing() {
 	MainWindow.clear(Color::White);
-	menu(); if (MenuPage) return;
-	endGame(); //if (EndGame) return;
+	menu(); if (MenuPage) return; // MenuPage = 0 means we're actually playing
+	checkEndGame();
 	drawMap();
 	f(i,Tanks.size()) Tanks[i].move();
 	f(i,Tanks.size()) MainWindow.draw(Tanks[i].getBody());

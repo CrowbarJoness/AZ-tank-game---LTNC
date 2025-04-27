@@ -1,14 +1,18 @@
 void drawMap () {
+	RectangleShape MenuBackgroundRect( Vector2f(WindowWidth,WindowHeight) );
+	MenuBackgroundRect.setTexture(&MenuBackground);
+	MainWindow.draw(MenuBackgroundRect);
+	
 	RectangleShape HorizontalWall (Vector2f (CellSize, WallThickness) ),
 				   VerticalWall (Vector2f (WallThickness, CellSize) );
 	HorizontalWall.setFillColor (Color::Black);
 	VerticalWall.setFillColor (Color::Black);
 	RectangleShape ground (Vector2f (MapWidth * CellSize, MapHeight * CellSize) );
-	ground.setFillColor(Color(255,255,255,200));
+	ground.setFillColor (Color(255,255,255,200));
 	ground.setOutlineThickness (WallThickness);
 	ground.setOutlineColor (Color::Black);
 	ground.setPosition (HorizontalBorden, VerticalBorden);
-	ground.setTexture(&MapBackground);
+	ground.setTexture (&MapBackground);
 	MainWindow.draw (ground);
 	f(i,MapWidth) f(j,MapHeight) {
 		if (Map[i][j][0]) {
@@ -28,7 +32,7 @@ void drawMap () {
 			MainWindow.draw (VerticalWall);
 		}
 	}
-	RectangleShape HomeRect(Vector2f(30,30));
+	RectangleShape HomeRect(Vector2f(50,50));
 	HomeRect.setPosition(10,10);
 	HomeRect.setFillColor(Color(255,255,255));
 	HomeRect.setOutlineThickness(-2);

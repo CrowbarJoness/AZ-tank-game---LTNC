@@ -7,12 +7,13 @@ int ran(int a, int b) {
 	}
 }
 
-vector<vector<vector<bool>>> dir; // dir[i][j][k] = 1 if cell in col i row j has a wall in dir k
-								  /*
-								  						  0
-								  						3 T 1
-								  						  2
-								  */
+// dir[i][j][k] = 1 if cell in col i row j has a wall in dir k
+/*
+	  0
+	3 T 1
+	  2
+*/
+vector<vector<vector<bool>>> dir;
 vector<vector<bool>> cell;
 int x[4] = {0,1,0,-1}, y[4] = {-1,0,1,0};
 int counter;
@@ -26,7 +27,7 @@ void dfs(int a, int b) { // float fill
 }
 
 vector<vector<vector<bool>>> getMap() {
-	int m = ran(2,16), n = ran(2,8);
+	int m = ran(3,15), n = ran(3,8);
 	vector<bool> useless1;
 	vector<vector<bool>> useless2;
 	useless1.assign(4,0);
@@ -49,7 +50,7 @@ vector<vector<vector<bool>>> getMap() {
 	*/
 	f(i,m-1) f(j,n) Wall.push_back({i,j,0});
 	f(i,m) f(j,n-1) Wall.push_back({i,j,1});
-	int q = ran(0, 2*(m+n));
+	int q = ran(0, m*n);
 	int c = Wall.size();
 	f(k,q) {
 		int p = ran(0,c-1);
